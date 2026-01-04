@@ -66,7 +66,7 @@ export function HeroSlider() {
 📱 *Sent via Interior Design Studio Website*
     `.trim()
 
-    const whatsappNumber = "919725295692"
+    const whatsappNumber = "916353583148"
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappURL, "_blank")
   }
