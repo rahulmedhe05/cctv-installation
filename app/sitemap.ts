@@ -29,5 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  return [...staticPages, ...keywordPages]
+  // Area pages - location-based SEO
+  const areaPages: MetadataRoute.Sitemap = vadodaraAreas.map((area) => ({
+    url: `${baseUrl}/${area.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...keywordPages, ...areaPages]
 }
