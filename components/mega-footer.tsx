@@ -107,14 +107,15 @@ export function MegaFooter() {
       <div className="border-b border-gray-700">
         <div className="container mx-auto px-4 py-10">
           <h2 className="text-xl font-bold mb-6 text-center">CCTV Installation in All Areas of Vadodara</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {vadodaraAreas.map((area) => (
-              <span
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {vadodaraAreas.map((area, index) => (
+              <Link
                 key={area.slug}
-                className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer"
+                href={`/${area.slug}`}
+                className="text-sm text-gray-400 hover:text-white transition-colors"
               >
-                {area.name}
-              </span>
+                {area.name}{index < vadodaraAreas.length - 1 ? "" : ""}
+              </Link>
             ))}
           </div>
         </div>
@@ -124,15 +125,31 @@ export function MegaFooter() {
       <div className="border-b border-gray-700">
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-xl font-bold mb-6 text-center">Authorized Dealer</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            {businessConfig.brands.map((brand) => (
-              <span
-                key={brand}
-                className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg"
-              >
-                {brand}
-              </span>
-            ))}
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/hikvision-cctv-dealer-in-vadodara" className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              Hikvision
+            </Link>
+            <Link href="/cp-plus-cctv-dealer-in-vadodara" className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              CP Plus
+            </Link>
+            <Link href="/dahua-cctv-dealer-in-vadodara" className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              Dahua
+            </Link>
+            <Link href="/bosch-security-system-in-vadodara" className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              Bosch
+            </Link>
+            <Link href="/panasonic-cctv-camera-in-vadodara" className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              Panasonic
+            </Link>
+            <Link href="/ezviz-camera-dealer-in-vadodara" className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              Ezviz
+            </Link>
+            <span className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg">
+              Godrej
+            </span>
+            <span className="text-gray-400 font-semibold px-4 py-2 bg-gray-800 rounded-lg">
+              Samsung
+            </span>
           </div>
         </div>
       </div>
